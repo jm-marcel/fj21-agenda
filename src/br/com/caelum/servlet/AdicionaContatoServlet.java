@@ -46,8 +46,7 @@ public class AdicionaContatoServlet extends HttpServlet {
 
         // fazendo a conversão da data
         try {
-            Date date;
-            date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
             dataNascimento = Calendar.getInstance();
             dataNascimento.setTime(date);
         } catch (ParseException e) {
