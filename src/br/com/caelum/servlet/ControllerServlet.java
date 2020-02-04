@@ -17,7 +17,7 @@ public class ControllerServlet extends HttpServlet {
 		String nomeDaClasse = "br.com.caelum.mvc.logica." + parametro;
 		
 		try {
-			Class classe = Class.forName(nomeDaClasse);
+			Class<?> classe = Class.forName(nomeDaClasse);
 			
 			Logica logica = (Logica) classe.newInstance();
 			String pagina = logica.executa(request, response);

@@ -22,7 +22,7 @@
 				<th>Data de Nascimento</th>
 				<th>Remover Contato</th>
 			</tr>
-			<!-- Percorre contatos montando as linhas da tabela -->
+			<!--Percorre contatos montando as linhas da tabela-->
 			<!--<c:forEach var="contato" items="${dao.lista}" varStatus="id">-->
 			<c:forEach var="contato" items="${contatos}" varStatus="id">
 				<tr bgcolor="#${id.count % 2 == 0 ? 'aaee88' : 'ffffff' }">

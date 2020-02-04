@@ -29,11 +29,6 @@ public class AdicionaContatoServlet extends HttpServlet {
 		log("Iniciando a Servlet");
 	}
 	
-	public void destroy() {
-		super.destroy();
-		log("Destruindo a Servlet");
-	}
-	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		// busca o Writer
 		PrintWriter out = response.getWriter();
@@ -69,5 +64,10 @@ public class AdicionaContatoServlet extends HttpServlet {
         // imprime o nome do contato que foi adicionado
         RequestDispatcher rd = request.getRequestDispatcher("/contato-adicionado.jsp");
         rd.forward(request, response);
+	}
+	
+	public void destroy() {
+		super.destroy();
+		log("Destruindo a Servlet");
 	}
 }
