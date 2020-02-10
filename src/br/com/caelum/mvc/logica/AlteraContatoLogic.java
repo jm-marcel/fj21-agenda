@@ -33,7 +33,6 @@ public class AlteraContatoLogic implements Logica{
 		dao.altera(contato);
 		
 		
-		
 		RequestDispatcher rd = request.getRequestDispatcher("/lista-contatos2.jsp");
 		rd.forward(request, response);
 		
